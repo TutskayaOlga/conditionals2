@@ -6,6 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
     private static void task1() {
         System.out.println("ЗАДАЧА №1 версия 1");
@@ -94,6 +95,63 @@ public class Main {
     private static void task6() {
         System.out.println("ЗАДАЧА №4");
         System.out.println(" ");
-
+        int deliveryDistance = 95;
+        int days = 1;
+        int firstDistance = 20;
+        int everyDistanceDay = 40;
+        if (deliveryDistance > firstDistance) {
+            days = (int) (Math.round((double)deliveryDistance/everyDistanceDay) + days);
+                System.out.printf("Потребуется дней для доставки карты: " +  days);
         }
+        System.out.println(" ");
+        System.out.println(" ");
+        }
+    private static void task7() {
+        System.out.println("ЗАДАЧА №5");
+        System.out.println(" ");
+        int motherNumber = 12;
+        String seasonWinter = "зима";
+        String seasonSummer = "лето";
+        String seasonAutumn = "осень";
+        String seasonSpring = "весна";
+        switch (motherNumber) {
+            case 1:
+                System.out.printf("Январь принадлежит к сезону %s ", seasonWinter);
+                break;
+            case 2:
+                System.out.printf("Февраль принадлежит к сезону %s ", seasonWinter);
+                break;
+            case 3:
+                System.out.printf("Март принадлежит к сезону %s ", seasonSpring);
+                break;
+            case 4:
+                System.out.printf("Апрель принадлежит к сезону %s ", seasonSpring);
+                break;
+            case 5:
+                System.out.printf("Май принадлежит к сезону %s ", seasonSpring);
+                break;
+            case 6:
+                System.out.printf("Июнь принадлежит к сезону %s ", seasonSummer);
+                break;
+            case 7:
+                System.out.printf("Июль принадлежит к сезону %s ", seasonSummer);
+                break;
+            case 8:
+                System.out.printf("Август принадлежит к сезону %s ", seasonSummer);
+                break;
+            case 9:
+                System.out.printf("Сентябрь принадлежит к сезону %s ", seasonAutumn);
+                break;
+            case 10:
+                System.out.printf("Октябрь принадлежит к сезону %s ", seasonAutumn);
+                break;
+            case 11:
+                System.out.printf("Ноябрь принадлежит к сезону %s ", seasonAutumn);
+            case 12:
+                System.out.printf("Декабрь принадлежит к сезону %s ", seasonWinter);
+                break;
+            default:
+                System.out.println("Такого месяца не существует");
+        }
+    }
 }
